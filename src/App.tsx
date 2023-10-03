@@ -1,12 +1,10 @@
-import './App.css'
+import Title from './components/Title'
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <Title label="React">Hello World</Title>
     </>
   )
 }
