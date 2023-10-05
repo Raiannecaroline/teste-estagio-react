@@ -5,7 +5,8 @@ const Header: React.FC = () => {
     <header>
       <nav>
         <ul>
-          <li><Link to="/">Pesquisar por Receitas</Link></li>
+          <li><Link to="/">Início</Link></li>
+          <li><Link to="/search-food">Pesquisar por Receitas</Link></li>
           <li><Link to="/search-letters">Pesquisar por Letras</Link></li>
           <li><Link to="/">Pesquisar por Ingredientes</Link></li>
         </ul>

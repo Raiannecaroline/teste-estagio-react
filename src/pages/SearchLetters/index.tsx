@@ -1,4 +1,3 @@
-import Header from "../../components/Header";
 import SearchFoodComponent from "../../components/SearchFood";
 import { useState, useEffect } from "react";
 
@@ -27,7 +26,7 @@ const SearchLeters: React.FC = () => {
   }
 
   // useEffect(() => {
-  //   getFoodApi()
+  //   getFoodApi('')
   // }, [])
   
 
@@ -35,7 +34,6 @@ const SearchLeters: React.FC = () => {
 
   return (
     <>
-      <Header/>
       <SearchFoodComponent label="Pesquisar por Nome.." onSearch={getFoodApi}/>
       <br/>
       <hr/>

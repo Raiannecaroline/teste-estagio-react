@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react";
+import Header from "../Header";
 
 type Props = {
   label: string,
@@ -23,13 +24,15 @@ const SearchFoodComponent: React.FC<Props> = ({label, onSearch}) => {
 
   return (
     <>
+    <Header/>
+    <hr/>
     <div>
       <form onSubmit={handleSubmit}>
-      <label htmlFor="search">{label}</label>
-      <br/>
-      <input id="search" type="text" style={{border: "1px solid black"}} placeholder="Pesquisar" value={search} onChange={handleSearch}/>
-      <br/>
-      <button type="submit">Pesquisar</button>
+        <label htmlFor="search">{label}</label>
+        <br/>
+        <input id="search" type="text" style={{border: "1px solid black"}} placeholder="Pesquisar" value={search} onChange={handleSearch}/>
+        <br/>
+        <button type="submit">Pesquisar</button>
       </form>
     </div>
     </>
