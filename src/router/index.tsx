@@ -3,6 +3,7 @@ import Home from "../pages/home";
 import SearchLeters from "../pages/SearchLetters";
 import SearchFoodComponent from "../components/SearchFood";
 import SearchFoodLettersComponent from "../components/SearchFoodLetters";
+import RecipesIngredientsComponent from "../components/RecipesIngredients";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/search-food-letters",
     element: <SearchFoodLettersComponent/>
+  },
+  {
+    path: "/serch-recipes-ingredients",
+    element: <RecipesIngredientsComponent/>
   },
 ]);
 

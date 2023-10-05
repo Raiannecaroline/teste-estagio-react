@@ -13,49 +13,47 @@ const Home: React.FC = () => {
 
   const [data, setData] = useState<ListFood[]>([])
 
-  const getFoodHome = async () => {
-    const foodHomeResponse = await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
-    const foodHomeData = await foodHomeResponse.json()
-
-    const {meals} = foodHomeData
-    if (meals) {
-      setData(meals)
+  const getTenFoods = async () => {
+    const promises = [];
+    for (let i = 0; i < 10; i++) {
+      promises.push(fetch(`https://www.themealdb.com/api/json/v1/1/random.php`));
     }
 
-    console.log(foodHomeData)
+    const responses = await Promise.all(promises);
+    const foodsData = await Promise.all(responses.map((response) => response.json()));
+    const meals = foodsData.map((foodData) => foodData.meals).filter((meal) => meal);
 
+    if (meals.length > 0) {
+      setData(meals.flat());
+    }
   }
 
   useEffect(() => {
-    getFoodHome()
+    getTenFoods()
   }, [])
-
-
-  console.log({data})
 
 
   return (
     <>
       <div>
-        <Header/>
+        <Header />
         <h1>Home Page</h1>
       </div>
 
       <div>
-        {/* <Home label="Receitas Aleatórias..." onSearched={getFoodHome}/> */}
-        <br/>
+        <br />
         {data.map((homeFood) => {
-          const {idMeal, strMeal, strInstructions, strMealThumb, strYoutube} = homeFood
+          const { idMeal, strMeal, strInstructions, strMealThumb, strYoutube } = homeFood
 
-          return ( 
+          return (
             <div key={idMeal}>
-              <img src={strMealThumb} alt={strMeal}/>
+              <img src={strMealThumb} alt={strMeal} />
               <div>
                 <h2>{strMeal}</h2>
                 <p>{strInstructions}</p>
                 <a href={strYoutube} target="_blank">{strYoutube}</a>
               </div>
-            </div> 
+            </div>
           )
         })}
       </div>

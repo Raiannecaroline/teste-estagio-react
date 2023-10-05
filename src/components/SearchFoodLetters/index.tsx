@@ -7,6 +7,7 @@ const SearchFoodLettersComponent: React.FC = () => {
 
     <>
       <Header/>
+      <h1>Food Letters</h1>
     </>
   )
 }
