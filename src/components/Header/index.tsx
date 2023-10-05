@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import {Link} from 'react-router-dom'
 
 const Header: React.FC = () => {
   return (
@@ -6,9 +6,9 @@ const Header: React.FC = () => {
       <nav>
         <ul>
           <li><Link to="/">Início</Link></li>
-          <li><Link to="/search-food">Pesquisar por Receitas</Link></li>
-          <li><Link to="/search-letters">Pesquisar por Letras</Link></li>
-          <li><Link to="/">Pesquisar por Ingredientes</Link></li>
+          <li><Link to="/search-food-letters">Pesquisar por Letras</Link></li>
+          <li><Link to="/search-letters">Pesquisar por Receitas</Link></li>
+          <li><Link to="/">Receitas por Ingredientes</Link></li>
         </ul>
       </nav>
       <br/>
