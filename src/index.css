@@ -1,4 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;500&family=Roboto&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh !important;
+  margin: 0;
+  padding: 0;
+}
+
+ .menu {
+  z-index: 999;
+} 

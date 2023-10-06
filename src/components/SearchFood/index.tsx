@@ -26,13 +26,23 @@ const SearchFoodComponent: React.FC<Props> = ({label, onSearch}) => {
     <>
     <Header/>
     <hr/>
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="search">{label}</label>
-        <br/>
-        <input id="search" type="text" style={{border: "1px solid black"}} placeholder="Pesquisar" value={search} onChange={handleSearch}/>
-        <br/>
-        <button type="submit">Pesquisar</button>
+    <div className="p-4 bg-gray-100 rounded-md shadow-md">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row sm:items-center">
+        <label htmlFor="search" className="text-lg font-semibold mb-2 sm:mb-0 sm:mr-2">Pesquisar:</label>
+        <input
+          id="search"
+          type="text"
+          className="border-2 border-orange-400 rounded-lg px-4 py-2 focus:outline-none focus:border-orange-600 flex-grow"
+          placeholder="Pesquisar"
+          value={search}
+          onChange={handleSearch}
+        />
+        <button
+          type="submit"
+          className="bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg mt-2 sm:mt-0"
+        >
+          Pesquisar
+        </button>
       </form>
     </div>
     </>
