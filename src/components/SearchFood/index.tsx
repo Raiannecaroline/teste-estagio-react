@@ -7,7 +7,7 @@ type Props = {
   onSearch: (text: string) => void
 }
 
-const SearchFoodComponent: React.FC<Props> = ({label, onSearch}) => {
+const SearchFoodComponent: React.FC<Props> = ({onSearch}) => {
   const [search, setSearch] = useState('')
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
