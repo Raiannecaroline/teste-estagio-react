@@ -6,7 +6,7 @@ const Header: React.FC = () => {
     <header className="bg-transparent p-4">
       <nav className="container mx-auto flex justify-between items-center">
         <Link to="/">
-          <img src="/src/images/theMealDB.png" alt="TheMealDb Logo" className="w-50 h-40" />
+          <img src="https://mirror.accum.se/mirror/xbmc.org/addons/leia/script.screensaver.themealdb/resources/logo.png" alt="TheMealDb Logo" className="w-50 h-40" />
         </Link>
         <ul className="flex flex-wrap justify-center items-center space-x-4">
           <li className="mb-2 sm:mb-0 sm:mr-4">
