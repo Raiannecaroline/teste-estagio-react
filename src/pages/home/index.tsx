@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "../../components/Header";
+import { Link } from "react-router-dom";
 
 type ListFood = {
   idMeal: string,
@@ -51,7 +52,9 @@ const Home: React.FC = () => {
 
             return (
               <div key={idMeal} className="bg-white rounded-lg shadow-md p-4 transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer hover:bg-orange-200">
-                <img src={strMealThumb} alt={strMeal} loading="lazy" className="w-full h-48 object-cover rounded-t-lg mb-4" />
+                <Link to={`../details-food/${idMeal}`}>
+                  <img src={strMealThumb} alt={strMeal} loading="lazy" className="w-full h-48 object-cover rounded-t-lg mb-4" />
+                </Link>
                 <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-orange-600">{strMeal}</h2>
                 <p className="text-sm sm:text-base mt-2 mb-4">{strInstructions.length > 300 ? `${strInstructions.slice(0, 300)}...` : strInstructions}</p>
                 <a href={strYoutube} target="_blank" className="bg-orange-300 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded text-center cursor-pointer block">Assista no YouTube</a>

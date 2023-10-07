@@ -27,7 +27,7 @@ const Header: React.FC = () => {
           </li>
           <li className="mb-2 sm:mb-0">
             <Link
-              to="/serch-recipes-ingredients"
+              to="/search-recipes-by-ingredients"
               className="text-orange-400 hover:text-orange-300 transition duration-300 font-semibold text-lg"
             >
               Receitas por Ingredientes

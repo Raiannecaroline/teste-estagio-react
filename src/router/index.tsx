@@ -1,9 +1,10 @@
 import {createBrowserRouter} from "react-router-dom";
 import Home from "../pages/home";
 import SearchLeters from "../pages/SearchLetters";
-import SearchFoodComponent from "../components/SearchFood";
 import SearchFoodLettersComponent from "../components/SearchFoodLetters";
 import RecipesIngredientsComponent from "../components/RecipesIngredients";
+import Ingredients from "../components/Ingredients";
+import IngredientsDetails from "../components/IngredientsDetails";
 
 const router = createBrowserRouter([
   {
@@ -15,16 +16,20 @@ const router = createBrowserRouter([
     element: <SearchLeters/>,
   },
   {
-    path: "/search-food",
-    element: <SearchFoodComponent/>,
-  },
-  {
     path: "/search-food-letters",
     element: <SearchFoodLettersComponent/>
   },
   {
-    path: "/serch-recipes-ingredients",
+    path: "/search-recipes-by-ingredients",
     element: <RecipesIngredientsComponent/>
+  },
+  {
+    path: "/search-recipes-by-ingredients/:ingredientName",
+    element: <Ingredients/>
+  },
+  {
+    path: "/details-food/:detailsId",
+    element: <IngredientsDetails/>
   },
 ]);
 

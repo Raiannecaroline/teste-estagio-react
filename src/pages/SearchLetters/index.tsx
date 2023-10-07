@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import SearchFoodComponent from "../../components/SearchFood";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 type ListMeal = {
   strYoutube: string, 
@@ -24,10 +25,6 @@ const SearchLeters: React.FC = () => {
       setData(meals)
     }
   }
-
-  // useEffect(() => {
-  //   getFoodApi('')
-  // }, [])
   
 
   console.log({data})
@@ -43,7 +40,9 @@ const SearchLeters: React.FC = () => {
 
           return (
             <div key={idMeal} className="bg-white rounded-lg shadow-md p-4 transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer hover:bg-orange-200">
-              <img src={strMealThumb} alt={strMeal} className="w-full h-48 object-cover rounded-t-lg mb-4" />
+              <Link to={`../details-food/${idMeal}`}>
+                <img src={strMealThumb} alt={strMeal} className="w-full h-48 object-cover rounded-t-lg mb-4" />
+              </Link>
               <h2 className="text-lg font-semibold text-orange-600">{strMeal}</h2>
               <p className="text-sm mt-2 mb-4">{strInstructions.length > 200 ? `${strInstructions.slice(0, 200)}...` : strInstructions}</p>
               <a
