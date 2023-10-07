@@ -4,7 +4,8 @@
 <h3 align="center">Teste estágio 2023/2</h3>
 
 ##  🔭 Descrição do Projeto
-Desenvolvi uma página, que consome a API do The Meal DB, que consiste em trazer receitas diversas. O desafio foi proposto pela Arise Technology e cumprido com muito esforço e dedicação.
+Desenvolvi uma página, que consome a API do The Meal DB, que consiste em trazer receitas diversas. 
+O desafio foi proposto pela Arise Technology e cumprido com muito esforço e dedicação.
 
 ## Status do projeto
 **Finalizado**
